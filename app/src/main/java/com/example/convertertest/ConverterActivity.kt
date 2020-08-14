@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_converter.*
 
@@ -12,40 +13,19 @@ class ConverterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_converter)
 
+        openConverterFragment()
+
         bn.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.convert ->{
-                    cardview.visibility = View.VISIBLE
-                    cardviewq.visibility = View.GONE
-                    text.visibility = View.VISIBLE
-                    textq.visibility = View.GONE
+                R.id.convert -> {
+                    openConverterFragment()
                 }
                 R.id.settings -> {
-                    cardview.visibility = View.GONE
-                    cardviewq.visibility = View.VISIBLE
-                    text.visibility = View.GONE
-                    textq.visibility = View.VISIBLE
+                    openSettingsFragment()
                 }
             }
             true
         }
-
-        changelanguage.setOnClickListener {
-
-        }
-
-        info.setOnClickListener {
-
-        }
-
-        rus.setOnClickListener {
-            toChange()
-        }
-
-        usd.setOnClickListener {
-            toChange()
-        }
-
     }
 
     fun toChange() {
@@ -54,5 +34,16 @@ class ConverterActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         finishAffinity()
+    }
+
+    fun changeFragment(fmt: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_holder, fmt).addToBackStack(null).commit()
+    }
+
+    fun openConverterFragment(){
+        changeFragment(ConvertFragment())
+    }
+    fun openSettingsFragment(){
+        changeFragment(SettingsFragment())
     }
 }
