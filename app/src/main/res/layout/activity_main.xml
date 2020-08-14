@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="65dp"
+        android:background="#FAFAFA">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="86dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="86dp"
+            android:text="Title awesome text"
+            android:textColor="#262C38"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet,\n
+consectetur adipiscing elit.\n
+Praesent rutrum elit lacus, vel"
+            android:textColor="#262C38"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="140dp"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="#FAFAFA">
+
+        <TextView
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#262C38"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="20dp"
+            android:text="SKIP"/>
+
+
+        <ImageView
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/dots"/>
+
+
+        <ImageView
+            android:id="@+id/dotsq"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/dotsq"/>
+
+        <TextView
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center|end"
+            android:textColor="#262C38"
+            android:text="NEXT"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:background="?selectableItemBackgroundBorderless"
+            android:id="@+id/letsgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center|end"
+            android:textColor="#262C38"
+            android:text="LETS GO"
+            android:visibility="gone"
+            android:layout_marginEnd="20dp"/>
+
+
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
